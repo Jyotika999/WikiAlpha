@@ -3,7 +3,7 @@
 
 import wolframalpha
 inp = input("Question: ")
-app_id = "JXK66Y-GYUWJ325W8"
+app_id = "app-id"
 client = wolframalpha.Client(app_id)
 
 res = client.query(inp)

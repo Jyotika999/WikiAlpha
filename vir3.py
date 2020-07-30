@@ -8,7 +8,7 @@ while True:
 
 	try:
 		#try block will constitute the wolframalpha
-		app_id = "JXK66Y-GYUWJ325W8"
+		app_id = "app -id"
 		client = wolframalpha.Client(app_id)
 		res = client.query(inp)
 		ans = next(res.results).text
