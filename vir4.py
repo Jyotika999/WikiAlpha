@@ -8,11 +8,11 @@ class MyFrame(wx.Frame):
             pos=wx.DefaultPosition, size=wx.Size(450, 100),
             style=wx.MINIMIZE_BOX | wx.SYSTEM_MENU | wx.CAPTION |
              wx.CLOSE_BOX | wx.CLIP_CHILDREN,
-            title="Doraemon")
+            title="WikiAlpha")
         panel = wx.Panel(self)
         my_sizer = wx.BoxSizer(wx.VERTICAL)
         lbl = wx.StaticText(panel,
-        label="Hello I am Dorameon, the Python Digital Assistant. How can I help you?")
+        label="Hello I am WikiAlpha, the Python Digital Assistant. How can I help you?")
         my_sizer.Add(lbl, 0, wx.ALL, 5)
         self.txt = wx.TextCtrl(panel, style=wx.TE_PROCESS_ENTER,size=(400,30))
         self.txt.SetFocus()
@@ -26,7 +26,7 @@ class MyFrame(wx.Frame):
         inp = inp.lower()
         try:
             #wolframalpha
-            app_id = "JXK66Y-GYUWJ325W8"
+            app_id = "your own app id here"
             client = wolframalpha.Client(app_id)
             result = client.query(input)
             ans = next(result.results).text
